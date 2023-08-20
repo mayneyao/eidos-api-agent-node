@@ -31,7 +31,7 @@ This communication flow involves a WebSocket connection between the Eidos API Ag
 
 You can use any of the following functions to query data from the database:
 
-- `sql4mainThread`
+- `sqlQuery`
 - `listTreeNodes`
 - `listAllDays`
 - `updateTreeNodeName`
@@ -44,7 +44,7 @@ To post a data query to the server, send the data in JSON format:
 ```json
 {
   "space": "<database name>",
-  "method": "sql4mainThread",
+  "method": "sqlQuery",
   "params": ["select * from tb_44d6193623544426873507e10f3cfd7f", [], "object"]
 }
 ```
@@ -53,12 +53,12 @@ To post a data query to the server, send the data in JSON format:
 - `method`: The name of the function.
 - `params`: The parameters of the function.
 
-One of the most useful functions is `sql4mainThread`, which allows you to query data from the database:
+One of the most useful functions is `sqlQuery`, which allows you to query data from the database:
 
 ```python
 r = requests.post('http://localhost:3333/rpc', json={
     'space': 'eidos',
-    'method': 'sql4mainThread',
+    'method': 'sqlQuery',
     'params': [
         'select * from tb_44d6193623544426873507e10f3cfd7f where _id = ?;',
         [
