@@ -2,8 +2,6 @@
 
 `Eidos Web Client <== websocket ==> Eidos API Agent <== http ==> Any HTTP Client`
 
-This communication flow involves a WebSocket connection between the Eidos API Agent and the Eidos Web Client, followed by an HTTP connection between the Eidos API Agent and any HTTP client, allowing the communication with the Eidos Web Client.
-
 ## Quick Start
 
 1. Start an API Agent, which is an HTTP & WebSocket server running on port 3333:
@@ -71,7 +69,7 @@ data = r.json()
 for row in data['data']['result']:
     print(row['cl_xu38'])
 ```
-
+explore more examples in [examples](./examples) folder.
 
 ## Build and Run
 
