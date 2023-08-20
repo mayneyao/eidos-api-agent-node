@@ -37,7 +37,7 @@ You can use any of the following functions to query data from the database:
 - `updateTreeNodeName`
 - `listUiColumns`
 
-To see all the available functions, refer to the [DataSpace.ts](/worker/DataSpace.ts) file.
+To see all the available functions, refer to the [DataSpace.ts](https://github.com/mayneyao/eidos/blob/main/worker/DataSpace.ts) file.
 
 To post a data query to the server, send the data in JSON format:
 
