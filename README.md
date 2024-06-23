@@ -1,6 +1,17 @@
 # Eidos API Example
 
-`Eidos Web Client <== websocket ==> Eidos API Agent <== http ==> Any HTTP Client`
+`Eidos Web App <== websocket ==> Eidos API Agent <== http ==> Any HTTP Client`
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Api Agent
+    participant Eidos Web App
+    User->>+Api Agent: Send request
+    Api Agent->>+Eidos Web App: Forward request
+    Eidos Web App->>-Api Agent: Process and respond
+    Api Agent->>-User: Return result
+```
 
 ## Quick Start
 
@@ -35,7 +46,8 @@ You can use any of the following functions to query data from the database:
 - `updateTreeNodeName`
 - `listUiColumns`
 
-To see all the available functions, refer to the [DataSpace.ts](https://github.com/mayneyao/eidos/blob/main/worker/DataSpace.ts) file.
+
+To see all the available functions, refer to the [DataSpace.ts](https://github.com/mayneyao/eidos/blob/main/worker/web-worker/DataSpace.ts) file.
 
 To post a data query to the server, send the data in JSON format:
 
